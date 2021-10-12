@@ -18,15 +18,16 @@ public class PlayerServices {
     public List<Player> getPlayers() {
         return pRepository.findAll();
     }
+
     public List<Player> getPlayersByCountryCode(String countryCode) {
-        return pRepository.findPlayerByCountryCode(countryCode);
+        return pRepository.findAll();
     }
 
-    public List<Player> getPlayersByContinent(String continent){
-        return pRepository.findPlayerInContinent(continent);
+    public List<Player> getPlayersByContinent(String continent) {
+        return pRepository.findAll();
     }
 
-    public List<Player> getPlayersGreaterThanRating(Integer rating){
-        return pRepository.findPlayersByRatingGreaterThanEqual(rating);
+    public List<Player> getPlayersGreaterThanRating(Integer rating) {
+        return pRepository.findAll();
     }
 }

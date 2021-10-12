@@ -8,11 +8,5 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface PlayerRepository extends JpaRepository<Player,String> {
-    @Query("select p from Player p where p.country.continent   = ?1")
-    List<Player> findPlayerInContinent(String Continent);
-
-    @Query("select p from Player p where p.country.code   = ?1")
-    List<Player> findPlayerByCountryCode(String code);
-
-    List<Player> findPlayersByRatingGreaterThanEqual(Integer rating);
+    
 }

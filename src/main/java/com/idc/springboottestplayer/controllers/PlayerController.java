@@ -28,18 +28,18 @@ public class PlayerController {
 
     @GetMapping(value = "/players/country/{country_code}")
     public List<Player> getPlayersByCountry(@PathVariable String country_code){
-        return pService.getPlayersByCountryCode(country_code);
+        return pService.getPlayers();
     }
 
     @GetMapping(value = "/players/continent/{continent}")
     public List<Player> getPlayersByContinent(@PathVariable String continent){
-       return pService.getPlayersByContinent(continent);
+        return pService.getPlayers();
     }
 
 
     @GetMapping(value = "/players/rating/{rating}")
     public List<Player> getPlayersGreaterThanRating(@PathVariable Integer rating){
 
-        return pService.getPlayersGreaterThanRating(rating);
+        return pService.getPlayers();
     }
 }
