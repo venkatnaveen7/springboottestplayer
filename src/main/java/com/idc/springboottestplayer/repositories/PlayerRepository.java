@@ -15,4 +15,11 @@ public interface PlayerRepository extends JpaRepository<Player,String> {
     List<Player> findPlayerByCountryCode(String code);
 
     List<Player> findPlayersByRatingGreaterThanEqual(Integer rating);
+    
+    /*
+    These method should also work
+    List<Player> findByCountryCode(String country);
+	List<Player> findByCountryContinent(String country);
+	List<Player> findByRating(Integer rating);
+    */
 }
